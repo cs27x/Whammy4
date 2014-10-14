@@ -65,7 +65,7 @@ public class Event {
 		try{
 			return DATE_TIME_FORMAT.parseDateTime(getDate());
 		}catch(IllegalArgumentException e){
-			return DateTime.now();
+			return null;
 		}
 	}
 
