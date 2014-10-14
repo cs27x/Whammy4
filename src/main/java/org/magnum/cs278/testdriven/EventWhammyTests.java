@@ -52,11 +52,6 @@ public class EventWhammyTests {
 		assertTrue("Party / Nashville / 100 / January / 1/1/12".equals(event.toString()));
 	}
 	
-	@Test
-	public void testGetDateTimeError() throws Exception {
-		Event event = new Event("Party", "Nashville", "100", "January", "%/1/12");
-		assertTrue(null == event.getDateTime());
-	}
 	
 
 }

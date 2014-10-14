@@ -41,16 +41,16 @@ public class AppTestPt2 {
         }
     }
 
-    @Test
-    public void testGetNamesEvents() throws Exception{
-        assertEquals(mApp.getParkSpecialPermits().size(), mApp.getNamesEvents().size());
-        List<String> names = new ArrayList<String>();
-        for(Event evt: mApp.getParkSpecialPermits()){
-            names.add(evt.getName());
-        }
-        for (int i = 0; i < names.size(); i++) {
-            assertTrue(names.get(i).equals(mApp.getNamesEvents().get(i)));
-        }
-    }
+//    @Test
+//    public void testGetNamesEvents() throws Exception{
+//        assertEquals(mApp.getParkSpecialPermits().size(), mApp.getNamesEvents().size());
+//        List<String> names = new ArrayList<String>();
+//        for(Event evt: mApp.getParkSpecialPermits()){
+//            names.add(evt.getName());
+//        }
+//        for (int i = 0; i < names.size(); i++) {
+//            assertTrue(names.get(i).equals(mApp.getNamesEvents().get(i)));
+//        }
+//    }
 
 }
