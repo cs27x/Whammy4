@@ -112,6 +112,7 @@ public class App {
 		return march_evts;
 	}	
 	
+	// last function for Jejo
 	public Event getFirstEventOfMonth(String month) throws Exception {
 		List<Event> events = getParkSpecialPermits();
 		Event ret = new Event("", "", "", "", "");
@@ -133,15 +134,11 @@ public class App {
 	}
 
 	public List<Event> getEventsForMonth(String date) throws Exception {
-		List<Event> temp;
-		temp = objectMapper.readValue(new URL(
-				PARK_SPECIAL_PERMITS),
-				eventListType
-				);
-		for(Iterator<Event> iter = temp.listIterator(); iter.hasNext();){
-			Event a = iter.next();
-			if (!a.getMonth().equals(date)){
-				iter.remove();
+		List<Event> temp = new ArrayList<Event>();
+		List<Event> evts = getParkSpecialPermits();
+		for(Event a: evts){
+			if (a.getMonth().equals(date)){
+				temp.add(a);
 			}
 		}
 		return temp;
