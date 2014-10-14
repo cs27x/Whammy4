@@ -234,4 +234,13 @@ public class App {
 		}
 		return toDo;
 	}
+	
+	public List<String> getNamesEvents() throws Exception {
+		List<Event> evts = getParkSpecialPermits();
+		List<String> names = new ArrayList<String>();
+		for(Event evt: evts){
+			names.add(evt.getName());
+		}
+		return names;
+	}
 }
