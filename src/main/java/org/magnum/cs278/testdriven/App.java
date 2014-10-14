@@ -61,7 +61,7 @@ public class App {
 			}
 		}
 
-		return null;
+		return toDo;
 	}
 
 	public List<Event> getParkSpecialPermits() throws Exception {
